@@ -1,0 +1,206 @@
+/* External font */
+@font-face {
+    font-family: 'Gupter-Medium';
+    src: url(assets/fonts/Gupter/Gupter-Medium.ttf);
+}
+
+/* Border box sizing for all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Styles for the page body */
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Gupter-Medium', sans-serif;
+    color: #000000;
+}
+
+/* Container styles for all new book entries */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    gap: 20px;
+    margin-left: 45px;
+    margin-right: 45px;
+    padding-bottom: 80px;
+  }
+
+/* Styling for each new book item added to the collection */
+.book {
+    font-size: 18px;
+    font-weight: bolder;
+    border-radius: 5px;
+    background-color: #d4f0ef;
+    border: 2px solid #b9e6e3;
+    box-shadow: 3px 4px 4px 2px #c2c1c1;
+}
+
+/* Hover effects for book items */
+.book:hover {
+    transform: translateY(-8px); 
+    box-shadow: 6px 4px 4px 2px #c2c1c1;
+}
+
+/* Paragraph styling inside each book container */
+.book p {
+    margin: 20px;              
+    text-align: center;         
+}
+
+/* Styling for every 2nd book in the collection */
+.book:nth-child(2n) {
+    border: 2px solid #b9e6e3;
+    background: linear-gradient(to bottom right, #bbd6e9, #f1fffe);
+}
+
+/* Styling for the header section */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+/* Styling for the SVG bookshelf image inside the header */
+.header svg {
+    fill: #b9e6e3;
+    width: 55px;
+    height: 55px;
+}
+
+/* Styling for the header text block */
+.header-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+/* Main heading style */
+.header-text {
+    font-size: 25px;
+}
+
+/* Subtitle style */
+.header-subtext {
+    font-size: 10px;
+}
+
+/* Introduction paragraph styling */
+.intro {
+    font-size: 13px;
+    text-align: center;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+
+/* Page button styling */
+button {
+    font-size: 12px;
+    background: linear-gradient(to bottom right, #bbd6e9, #f1fffe);
+    border: 2px solid #c2c1c1;
+    border-radius: 5px;
+    color: #000000;
+    width: 120px;
+    height: 40px;
+    margin-bottom: 50px;
+}
+
+/* Flexbox container for center aligning the "New Book" button */
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background: linear-gradient(to bottom right, #bbd6e9, #f1fffe);
+    transform: translateY(3px);
+    box-shadow: 3px 4px 4px 2px #c2c1c1;
+}
+
+/* Styling for SVG image on the "New Book" button */
+button svg {
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+/* Styling for form labels */
+label {
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+/* Combined styling for form "confirm" and "cancel" buttons */
+form button {
+    margin-left: 0;
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 80px;
+    height: 20px;
+}
+
+/* "Confirm" button styling*/
+#confirm-button {
+    color: #3cb043;
+    font-weight: bolder;
+}
+
+/* "Cancel" button styling */
+#cancel-button {
+    color: #d0312d;
+    font-weight: bolder;
+}
+
+/* Styling for the user's current read status */
+.read-status {
+    position: relative;
+    cursor: pointer;
+    font-weight: bold; 
+    color: #0000ff;
+}
+
+/* Bottom border styling for the user's current read status */
+.read-status span {
+    border-bottom: 1px dotted #0000ff;
+}
+
+/* Hover effects for read status */
+.read-status:hover {
+    color: #000080; 
+    cursor: pointer; 
+}
+
+/* Styling for the tooltip that appears after the read status */
+.read-status::after {
+    content: attr(tooltip); 
+    position: absolute; 
+    left: 70%;
+    top: -30%;
+    width: 150px;
+    height: 15px;
+    margin-top: 5px;
+    font-size: small;
+    background-color: #c2c1c1;  
+    color: #000000;
+    padding: 5px; 
+    border-radius: 5px;
+    border-color: transparent transparent transparent #c2c1c1;
+    visibility: hidden; 
+    transition: opacity 0.3s;
+}
+
+/* Styling to show the tooltip upon hover */
+.read-status:hover::after {
+    opacity: 1;
+    visibility: visible; 
+}

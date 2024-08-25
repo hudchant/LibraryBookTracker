@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <title>Library</title>
+</head>
+<body>
+
+    <!-- Start of header section -->
+    <div class="header">
+        <!-- SVG image for the bookshelf logo -->
+        <div class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="3 3 18 18"><title>bookshelf</title><path d="M9 3V18H12V3H9M12 5L16 18L19 17L15 4L12 5M5 5V18H8V5H5M3 19V21H21V19H3Z" /></svg></div>
+        <div class="header-block">
+        <!-- Page main heading -->
+        <div class="header-text"><b>Book Tracker</b></div>
+        <!-- Page subtitle -->
+        <div class="header-subtext">Your ultimate personal book collection</div>
+        </div> 
+    </div>
+    <!-- End of header section -->
+
+    <!-- Modal dialog form for adding new books to user collection -->
+    <dialog id="formDialog">
+        <!-- Form elements for gathering book details -->
+        <form>
+            <p>
+                <!-- Book title form input -->
+                <label for="title">Book title: </label><br>
+                <input type="text" name="title" id="title"/><br>
+            </p>
+            <p>
+                <!-- Author's name form input -->
+                <label for="name">Author's first and last name: </label><br>
+                <input type="text" name="name" id="name"/><br>
+            </p>
+            <p>
+                <!-- Number of pages form input -->
+                <label for="pages">Number of pages: </label><br>
+                <input type="text" name="pages" id="pages"/><br><br>
+            </p>
+            <p>
+                <!-- Checkbox for selecting current read status --> 
+                <input type="checkbox" id="status" name="status" value="Status">
+                <label for="status"> I have already read this book.</label><br>
+            </p>
+          <div>
+            <!-- Buttons for submitting or closing the book form -->
+            <button id="confirm-button" value="default">Confirm</button>
+            <button id="cancel-button" value="cancel" formmethod="dialog">Cancel</button>
+          </div>
+        </form>
+        <!-- End of form -->
+      </dialog>
+      <!-- End of modal dialog -->
+    
+    <!-- Brief page introduction paragraph -->
+    <p class="intro">Whether you're an avid reader or an occasional bookworm, we help you track your personal book collections. Manage details about your favorite books, including titles, authors, number of pages, and even your current reading statuses. This tracker allows you to easily add, edit, or remove books and explore your reading habits over time. Join this wonderful community of book lovers and take control of your reading journey today!</p>
+    
+    <!-- Container for adding new books to collection -->
+    <div class="button-container">
+    <!-- SVG image placed on the "New Book" button; the "New Book" button -->
+    <button id="showDialog"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>book-plus</title><path d="M13 19C13 20.1 13.3 21.12 13.81 22H6C4.89 22 4 21.11 4 20V4C4 2.9 4.89 2 6 2H7V9L9.5 7.5L12 9V2H18C19.1 2 20 2.89 20 4V13.09C19.67 13.04 19.34 13 19 13C15.69 13 13 15.69 13 19M20 18V15H18V18H15V20H18V23H20V20H23V18H20Z" /></svg><b>NEW BOOK</b></button>
+    </div>
+
+    <!-- Placeholder for new books to be added dynamically as they are entered by the user -->
+    <div class="container">
+    </div>
+    <!-- End of book container -->
+
+    <!-- External JavaScript file -->
+    <script src="main.js"></script>
+
+</body>
+</html>
